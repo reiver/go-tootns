@@ -8,6 +8,52 @@ Online documentation, which includes examples, can be found at: http://godoc.org
 
 [![GoDoc](https://godoc.org/github.com/reiver/go-tootns?status.svg)](https://godoc.org/github.com/reiver/go-tootns)
 
+## Example
+
+```golang
+import (
+	"github.com/reiver/go-tootns"
+	"github.com/reiver/go-jsonld"
+)
+
+// ...
+
+var toot = tootns.Toot{
+	Discoverable: opt.Something(true),
+	Indexable:    opt.Something(true),
+}
+
+// ...
+
+bytes, err := jsonld.Marshal(toot)
+```
+
+`jsonld.Marshal()` can be used to mix multiple namespaces.
+For example:
+
+```golang
+import (
+	"github.com/reiver/go-act"
+	"github.com/reiver/go-tootns"
+	"github.com/reiver/go-jsonld"
+)
+
+// ...
+
+var person act.Person{
+	// ...
+}
+
+var toot = tootns.Toot{
+	Discoverable: opt.Something(true),
+	Indexable:    opt.Something(true),
+}
+
+// ...
+
+bytes, err := jsonld.Marshal(person, toot)
+```
+
 ## Import
 
 To import package **tootns** use `import` code like the follownig:
