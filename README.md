@@ -2,6 +2,8 @@
 
 Package **tootns** provides an implementation of the (Mastodon) **toot** JSON-LD namespace for the ActivityPub and ActivityStreams protocols, as they are used on the Fediverse, for the Go programming language.
 
+The **toot** namespace is the one that uses the URL `http://joinmastodon.org/ns#`
+
 ## Documention
 
 Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-tootns
